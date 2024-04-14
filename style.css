@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --LightRed: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --OffWhite: hsl(0, 0%, 94%);
+    --LightGrey:  hsl(0, 0%, 86%);
+    --SmokeyGrey: hsl(0, 1%, 44%);
+    --OffBlack: hsl(0, 0%, 8%);
+}
+input{
+    font-size: 1.8rem;
+}
+body{
+    background: var(--LightGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+.container{
+    width:40%;
+    background: var(--White);
+    padding:1.5rem;
+    border-radius: .6rem;
+    border-bottom-right-radius: 40%;
+    overflow: hidden;
+}
+.form-wrapper{
+    width:100%;
+    display:flex;
+    margin-bottom: 1rem;
+}
+.form-input{
+    flex:1;
+}
+.form-input >label{
+    display:block;
+    margin-bottom:.7rem;
+    color:var(--SmokeyGrey);
+
+}
+.form-input >input{
+    width:60%;
+    padding:.6rem;
+    border-radius: .3rem;
+    outline:none;
+    border:.1rem solid var(--SmokeyGrey);
+}
+
+.form-submit{
+    display:flex;
+    align-items: center;
+}
+.form-submit >div{
+    width:90%;
+    height:.1rem;
+    background:var(--SmokeyGrey);
+}
+.form-submit >button{
+    background: var(--Purple);
+    outline: none;
+    border:none;
+    border-radius: 50%;
+    padding:0.5rem;
+    cursor:pointer;
+}
+.form-submit >button:hover{
+    background:var(--OffBlack);
+}
+.container-content{
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.content{
+    display: flex;
+    align-items: center;
+    gap:0.4rem;
+}
+.content >span{
+    color:var(--Purple);
+    font-size: 2rem;
+}
+.day-err,.month-err,.year-err{
+    font-size: 10px;
+    color: var(--LightRed);
+    margin-top: 0.5rem;
+}
+@media(min-width:481px) and (max-width:600px){
+    .container{
+        width: 70%;
+    }
+}
+@media(max-width:480px){
+    .container{
+        width:90%;
+    }
+    .form-input >input{
+        width:90%;
+    }
+    .form-submit{
+        position: relative;
+        margin-top: 3rem;
+    }
+    .form-submit >div{
+        width: 100%;
+    }
+    .form-submit >button{
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        margin:auto;
+        width:50px;
+        height:50px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
